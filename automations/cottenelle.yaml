@@ -1,0 +1,11 @@
+
+- alias: Cottenelle
+
+  trigger: 
+    - platform: state
+      entity_id: binary_sensor.cottenelle
+      to: 'on'
+
+  action: 
+    - service: scene.turn_on
+      entity_id: scene.sunset

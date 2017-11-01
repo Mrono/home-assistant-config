@@ -1,0 +1,13 @@
+name: Bedroom
+view: yes
+entities:
+  - sensor.bedroom_temp
+  - sensor.bedroom_voltage
+  - sensor.temperature_158d00018734a1
+  - sensor.humidity_158d00018734a1
+  - sensor.illumination_158d0001a66203
+
+  - group.bedroomlights
+
+  - binary_sensor.esp_4h7fo4u
+  - binary_sensor.motion_sensor_158d0001a66203

@@ -1,0 +1,6 @@
+  - platform: darksky
+    api_key: a950c8d4bc58e73422ba64bebd82f96b
+    monitored_conditions:
+      - summary
+      - icon
+      - nearest_storm_distance

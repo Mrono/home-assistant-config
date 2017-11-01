@@ -1,0 +1,6 @@
+- name: Sunrise
+  entities:
+    switch.nyan_lights: off
+    group.livingroomlights: off
+    group.bedroomlights: off
+    group.hallwaylights: off

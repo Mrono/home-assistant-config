@@ -1,0 +1,4 @@
+name: Hot Glue Gun
+view: no
+entities:
+  - switch.switch1

@@ -1,0 +1,8 @@
+- name: Turn off all devices
+  entities:
+    switch.switch1:
+      state: off
+    media_player.livingroom:
+      state: off
+    media_player.living_room_home:
+      state: off

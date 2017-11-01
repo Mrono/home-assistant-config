@@ -1,0 +1,13 @@
+
+- alias: Disable hot glue gun after 1 hour
+
+  trigger: 
+    - platform: state
+      entity_id: switch.switch1
+      to: 'on'
+      for:
+        minutes: 60
+
+  action: 
+    service: switch.turn_off
+    entity_id: switch.switch1

@@ -1,0 +1,14 @@
+
+- alias: esp_4h7fo4u
+
+  trigger: 
+    - platform: state
+      entity_id: binary_sensor.esp_4h7fo4u
+      to: 'on'
+
+  action: 
+    - service: python_script.light_test
+      data_template:
+        entity_id: group.officelights
+        action: toggle
+        max: 200

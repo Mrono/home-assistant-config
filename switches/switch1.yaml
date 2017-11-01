@@ -1,0 +1,9 @@
+    platform: mqtt
+    name: "switch1"
+    state_topic: "ha/esp_d738tb4/hotglue/power"
+    command_topic: "ha/esp_d738tb4/gpio/0"
+    qos: 0
+    payload_on: "1"
+    payload_off: "0"
+    optimistic: false
+    retain: true

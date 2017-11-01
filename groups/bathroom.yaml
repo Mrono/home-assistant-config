@@ -1,0 +1,4 @@
+name: Bathroom
+view: yes
+entities:
+  - group.bathroomlights

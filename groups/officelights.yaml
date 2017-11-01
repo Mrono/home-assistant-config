@@ -1,0 +1,3 @@
+name: Office Lights
+entities:
+  - light.tradfri_bulb_e26_ws_opal_980lm_4

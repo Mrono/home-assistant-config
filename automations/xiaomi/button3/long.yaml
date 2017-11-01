@@ -1,0 +1,15 @@
+
+- alias: Xiaomi_button3_long
+
+  trigger: 
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.switch_158d00013f878a
+        click_type: long_click_press
+        
+  action: 
+    - service: scene.turn_on
+      entity_id: scene.turn_off_all_lights
+    - service: scene.turn_on
+      entity_id: scene.turn_off_all_devices

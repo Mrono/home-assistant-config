@@ -1,0 +1,38 @@
+
+- alias: Xiaomi_button5_single
+
+  trigger: 
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.switch_158d00019df1ef
+        click_type: single
+
+  condition:
+    - condition: state
+      entity_id: group.hotgluegun
+      state: 'on'
+        
+  action: 
+    - service: switch.turn_off
+      entity_id: group.hotgluegun
+
+
+- alias: Xiaomi_button5_single
+
+  trigger: 
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.switch_158d00019df1ef
+        click_type: single
+       
+  condition:
+    - condition: state
+      entity_id: group.hotgluegun
+      state: 'off'
+
+  action: 
+    - service: switch.turn_on
+      entity_id: group.hotgluegun
+

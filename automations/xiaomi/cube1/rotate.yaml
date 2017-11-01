@@ -1,0 +1,15 @@
+- alias: Xiaomi_cube1_rotate
+
+  trigger: 
+    - platform: event
+      event_type: cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d000101bc14
+        action_type: rotate
+
+  action:
+    - service: python_script.light
+      data_template:
+        entity_id: group.officelights
+        action: 'dimmer'
+        trigger_event: "{{ trigger.event }}"

@@ -1,0 +1,14 @@
+
+- alias: Notify on location change
+
+  trigger: 
+    - platform: state
+      entity_id: device_tracker.samsungsmg955u
+      from: 'not_home'
+      to: 'home'
+
+  action: 
+    - service: notify.pushover
+      data:
+        message: "Alexa has arrived home"
+        title: "Location update"

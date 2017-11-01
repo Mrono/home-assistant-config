@@ -1,0 +1,11 @@
+
+- alias: Turn off hot glue gun after 1 hr
+
+  trigger: 
+    - platform: state
+      entity_id: binary_sensor.esp_4h7fo4u
+      to: 'on'
+
+  action: 
+    - service: light.toggle
+      entity_id: light.ailight2f0148

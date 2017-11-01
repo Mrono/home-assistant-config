@@ -1,0 +1,11 @@
+name: All devices in livingroom
+entities:
+#  - light.ailight2b9ee6
+#  - light.ailight3403ab
+  - switch.nyan_lights
+  - group.hotgluegun
+  - media_player.livingroom
+  - media_player.living_room_home
+  - light.tradfri_bulb_e26_ws_opal_980lm
+  - light.tradfri_bulb_e26_ws_opal_980lm_2
+  - light.livingroom_rgb

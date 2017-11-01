@@ -1,0 +1,195 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret lat
+  longitude: !secret long
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Denver
+
+  customize:
+    group.all_automations:
+      hidden: false
+    group.all_lights:
+      hidden: false
+    group.all_devices:
+      hidden: false
+    group.livingroomlamps:
+      emulated_hue: true
+      emulated_hue_name: Livingroom Lamps
+    group.bedroomlights:
+      emulated_hue: true
+      emulated_hue_name: Bedroom Lights
+    group.bathroomlights:
+      emulated_hue: true
+      emulated_hue_name: Bathroom Lights
+    group.kitchenlights:
+      emulated_hue: true
+      emulated_hue_name: Kitchen Lights
+    group.hallwaylights:
+      emulated_hue: true
+      emulated_hue_name: Hallway Lights
+    group.officelights:
+      emulated_hue: true
+      emulated_hue_name: Office Lights
+
+#    group.livingroomall:
+#      emulated_hue: true
+#      emulated_hue_name: Livingroom
+    device_tracker.samsungsmg955u:
+      friendly_name: Alexa
+    device_tracker.android2b5b3318913096ed:
+      friendly_name: Michael 
+
+    sensor.temperature_158d0001825887:
+      friendly_name: XLivingroom Temp
+    sensor.humidity_158d0001825887:
+      friendly_name: XLivingroom Humidity
+
+    sensor.temperature_158d00018734a1:
+      friendly_name: XBedroom Temp
+    sensor.humidity_158d00018734a1:
+      friendly_name: XBedroom Humidity
+
+    sensor.temperature_158d00018734ca:
+      friendly_name: XOutside Temp
+    sensor.humidity_158d00018734ca:
+      friendly_name: XOutside Humidity
+
+    sensor.temperature_158d00018258e4:
+      friendly_name: XOffice Temp
+    sensor.humidity_158d00018258e4:
+      friendly_name: XOffice Humidity
+
+    binary_sensor.motion_sensor_158d0001a36727:
+      friendly_name: Office Movement
+
+    binary_sensor.motion_sensor_158d0001a25018:
+      friendly_name: Livingroom Movement
+    sensor.illumination_158d0001a25018:
+      friendly_name: Livingroom Illumination
+
+    binary_sensor.motion_sensor_158d0001a66203:
+      friendly_name: Bedroom Movement
+    sensor.illumination_158d0001a66203:
+      friendly_name: Bedroom Illumination
+
+    binary_sensor.switch_158d0001101bc1:
+      friendly_name: Button 1
+    sensor.illumination_158d0001101bc1:
+      friendly_name: Livingroom Illumination
+
+    binary_sensor.door_window_sensor_158d00018764b9:
+      friendly_name: Front Door
+
+#  customize_domain:
+#    automation:
+#      initial_state: 'on'      
+
+device_tracker:
+  - platform: unifi
+    username: !secret unifi_user
+    password: !secret unifi_pass
+    host: !secret unifi_host
+    verify_ssl: false
+
+tradfri:
+  host: !secret tradfri_gateway
+  api_key: !secret tradfri_api_key
+  allow_tradfri_groups: false
+
+group: !include_dir_named groups/
+automation: !include_dir_merge_list automations/
+
+python_script:
+
+#logger:
+#  default: debug
+
+switch: !include_dir_list switches/
+light: !include_dir_list lights/
+camera: !include_dir_list cameras/
+scene: !include_dir_list scenes/
+script: !include_dir_named scripts/
+binary_sensor: !include_dir_merge_list binary_sensors/
+sensor: !include_dir_merge_list sensors/
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret api_password
+  server_port: 8123
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+
+# Text to speech
+tts:
+  platform: google
+
+mqtt:
+  broker: !secret mqtt_host
+  discovery: true
+
+emulated_hue:
+  type: google_home
+  listen_port: 80
+  expose_by_default: false
+
+
+
+influxdbfix:
+  host: !secret influx_host
+  default_measurement: domain
+  override_measurement: domain
+  exclude:
+    domains:
+       - automation
+
+notify:
+  - name: pushover
+    platform: pushover
+    api_key: !secret pushover_api_key
+    user_key: !secret pushover_user_key
+
+xiaomi:
+  gateways:
+   - mac:
+     key: !secret xiaomi_gateway_key
+
+#recorder:

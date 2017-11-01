@@ -1,0 +1,6 @@
+  - platform: mqtt
+    state_topic: "/ha/esp_4h7fo4u/Input/Button"
+    name: "esp_4h7fo4u"
+    qos: 0
+    payload_on: "1"
+    payload_off: "0"

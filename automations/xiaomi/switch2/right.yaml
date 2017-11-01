@@ -1,0 +1,14 @@
+- alias: Xiaomi_switch2_single
+
+  trigger: 
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.wall_switch_right_158d000164164b
+        click_type: single
+       
+  action:
+    - service: python_script.light
+      data_template:
+        entity_id: group.kitchenlights
+        action: dim_toggle

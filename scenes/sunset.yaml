@@ -1,0 +1,5 @@
+- name: Sunset
+  entities:
+    group.livingroomlamps:
+      state: on
+      brightness: 254

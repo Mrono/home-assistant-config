@@ -1,0 +1,15 @@
+
+- alias: Xiaomi_button3_single
+
+  trigger: 
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.switch_158d00013f878a
+        click_type: single
+
+  action:
+    - service: python_script.light     
+      data_template:
+        entity_id: group.livingroomlamps
+        action: toggle

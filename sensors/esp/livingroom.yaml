@@ -1,0 +1,9 @@
+#  - platform: mqtt
+#    state_topic: "ha/esp_3766188/sensor/temp"
+#    name: "Livingroom SHT30 Temp"
+ #   unit_of_measurement: '°F'
+
+#  - platform: mqtt
+#    state_topic: "ha/esp_3766188/sensor/humidity"
+#    name: "Livingroom Humidity"
+ #   unit_of_measurement: '%'

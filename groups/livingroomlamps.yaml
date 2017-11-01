@@ -1,0 +1,6 @@
+name: Livingroom Lamps
+entities:
+#  - light.ailight2b9ee6
+#  - light.ailight3403ab
+  - light.tradfri_bulb_e26_ws_opal_980lm
+  - light.tradfri_bulb_e26_ws_opal_980lm_2

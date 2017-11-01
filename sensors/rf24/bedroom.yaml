@@ -1,0 +1,11 @@
+  - platform: mqtt
+    state_topic: "ha/rf24/3"
+    name: "Bedroom Temp"
+    unit_of_measurement: '°F'
+    value_template: '{{ value_json.curTemp }}'
+
+  - platform: mqtt
+    state_topic: "ha/rf24/3"
+    name: "Bedroom Voltage"
+    unit_of_measurement: 'V'
+    value_template: '{{ value_json.voltage }}'

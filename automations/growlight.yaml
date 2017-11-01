@@ -1,0 +1,20 @@
+
+#- alias: Lights - Turn on at 11
+
+#  trigger: 
+#    - platform: time
+#      at: '12:00:00'
+
+#  action: 
+#    - service: switch.turn_on
+#      entity_id: switch.switch1
+
+#- alias: Lights - Turn off at 4
+
+#  trigger: 
+#    - platform: time
+#      at: '15:00:00'
+
+#  action: 
+#    - service: switch.turn_off
+#      entity_id: switch.switch1

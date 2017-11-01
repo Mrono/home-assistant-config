@@ -1,0 +1,6 @@
+  - platform: mqtt
+    state_topic: "dash/cottenelle"
+    name: "Cottenelle"
+    qos: 0
+    payload_on: "active"
+    payload_off: "inactive"

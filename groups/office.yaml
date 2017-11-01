@@ -1,0 +1,14 @@
+name: Office
+view: yes
+entities:
+  - sensor.office_temp
+  - sensor.office_voltage
+  - sensor.temperature_158d00018258e4
+  - sensor.humidity_158d00018258e4
+  - sensor.illumination_158d0001a36727
+
+  - binary_sensor.motion_sensor_158d0001a36727
+
+  - group.officelights
+
+  - light.tradfri_bulb_e26_opal_1000lm_7

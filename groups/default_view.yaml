@@ -1,0 +1,52 @@
+view: yes
+icon: mdi:home 
+entities:
+  - group.livingroomlights
+  - group.hotgluegun
+  - group.bedroomlights
+  - group.bathroomlights
+  - group.kitchenlights
+  - group.hallwaylights
+  - group.officelights
+  - group.printerlight
+
+#  - sensor.livingroom_temp
+#  - sensor.office_temp
+#  - sensor.bedroom_temp
+#  - sensor.outside_temp
+  - sensor.dark_sky_summary
+  - sensor.temperature_158d0001825887
+  - sensor.humidity_158d0001825887
+  - sensor.temperature_158d00018734a1
+  - sensor.humidity_158d00018734a1
+  - sensor.temperature_158d00018734ca
+  - sensor.humidity_158d00018734ca
+  - sensor.temperature_158d00018258e4
+  - sensor.humidity_158d00018258e4
+
+  - binary_sensor.switch_158d0001101bc1
+  - binary_sensor.cottenelle
+  - binary_sensor.door_window_sensor_158d00018764b9
+
+  - switch.nyan_lights
+
+  - scene.presunset
+  - scene.sunset
+  - scene.sunrise
+  - scene.turn_off_all_lights
+  - scene.turn_off_all_devices
+
+  - camera.foscam_camera
+
+#  - light.ailight3403ab
+#  - light.ailight2b9ee6
+  - light.ailight2ef169
+  - light.ailight2f0148
+#  - light.panel_light_1
+
+
+  - media_player.livingroom
+  - media_player.living_room_home
+
+  - device_tracker.samsungsmg955u
+  - device_tracker.android2b5b3318913096ed

@@ -1,0 +1,9 @@
+    platform: mqtt_json
+    name: 'Livingroom RGB'
+    state_topic: 'ha/RGB/000CEC36/json/state'
+    command_topic: 'ha/RGB/000CEC36/json/set'
+#    color_temp: true
+    brightness: true
+    rgb: true
+#    white_value: true
+    effect: true

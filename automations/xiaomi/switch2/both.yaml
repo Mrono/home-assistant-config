@@ -1,0 +1,39 @@
+- alias: Xiaomi_switch2_both
+
+  trigger: 
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.wall_switch_both_158d000164164b
+        click_type: both
+
+  condition:
+    - condition: state
+      entity_id: group.hallwaylights
+      state: 'on'
+        
+  action: 
+    - service: light.turn_off
+      entity_id: group.hallwaylights
+
+- alias: Xiaomi_switch2_both
+
+  trigger: 
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.wall_switch_both_158d000164164b
+        click_type: both
+       
+  condition:
+    - condition: state
+      entity_id: group.hallwaylights
+      state: 'off'
+
+  action: 
+    - service: light.turn_on
+      entity_id: group.hallwaylights
+      data:
+        brightness: 255
+        rgb_color: [255, 255, 255]
+        white_value: 255

@@ -1,0 +1,10 @@
+    platform: mqtt_json
+    name: 'AiLight-3403AB'
+    state_topic: 'ha/AiLight-3403AB'
+    command_topic: 'ha/AiLight-3403AB/set'
+    color_temp: true
+    brightness: true
+    rgb: true
+    white_value: true
+    effect: false
+    optimistic: false

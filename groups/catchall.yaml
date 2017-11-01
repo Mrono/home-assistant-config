@@ -1,0 +1,6 @@
+name: Catch ALl
+view: yes
+entities:
+  - group.all_lights
+  - group.all_devices
+  - group.all_automations

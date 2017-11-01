@@ -1,0 +1,5 @@
+  platform: command_line
+  switches:
+    nyan_lights:
+      command_on: docker start nyan-lights 
+      command_off: docker stop nyan-lights 

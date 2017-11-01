@@ -1,0 +1,10 @@
+    platform: mqtt_json
+    name: 'AiLight-2B9EE6'
+    state_topic: 'ha/AiLight-2B9EE6'
+    command_topic: 'ha/AiLight-2B9EE6/set'
+    color_temp: true
+    brightness: true
+    rgb: true
+    white_value: true
+    effect: false
+    optimistic: false

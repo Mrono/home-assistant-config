@@ -1,0 +1,4 @@
+name: Bathroom Lights
+entities:
+  - light.tradfri_bulb_e26_opal_1000lm
+  - light.tradfri_bulb_e26_opal_1000lm_2
