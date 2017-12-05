@@ -1,4 +1,4 @@
-- name: Sunset
+- name: Livingroom Media Stop
   entities:
     group.livingroomlamps:
       state: on

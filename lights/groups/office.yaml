@@ -1,0 +1,4 @@
+platform: grouped_light
+name: Office
+entities:
+  - light.tradfri_bulb_e26_ws_opal_980lm_4

@@ -1,0 +1,8 @@
+  - platform: min_max
+    name: "House Humidity"
+    type: mean
+    unit_of_measurement: '°F'
+    entity_ids:
+      - sensor.humidity_158d0001825887
+      - sensor.humidity_158d00018734a1 
+      - sensor.humidity_158d00018258e4

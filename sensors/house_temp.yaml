@@ -1,0 +1,8 @@
+  - platform: min_max
+    name: "House Temp"
+    type: mean
+    unit_of_measurement: '°F'
+    entity_ids:
+      - sensor.temperature_158d0001825887
+      - sensor.temperature_158d00018734a1 
+      - sensor.temperature_158d00018258e4

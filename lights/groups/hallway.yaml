@@ -1,0 +1,4 @@
+platform: grouped_light
+name: Hallway
+entities:
+  - light.tradfri_bulb_e26_opal_1000lm_3

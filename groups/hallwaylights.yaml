@@ -1,3 +1,4 @@
 name: Hallway Light
 entities:
-  - light.tradfri_bulb_e26_opal_1000lm_3
+#  - light.tradfri_bulb_e26_opal_1000lm_3
+  - light.hallway

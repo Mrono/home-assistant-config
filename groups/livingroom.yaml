@@ -1,7 +1,7 @@
 name: Living Room
 view: yes
 entities:
-  - group.livingroomlamps
+  - light.livingroom_lamps
   - group.hotgluegun
 
   - light.livingroom_rgb

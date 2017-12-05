@@ -12,3 +12,4 @@
       data_template:
         entity_id: group.kitchenlights
         action: dim_toggle
+        max: 200

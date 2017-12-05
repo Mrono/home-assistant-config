@@ -1,6 +1,7 @@
 name: Bedroom Lights
 entities:
-  - light.clear_white_spectrum_bulb
-  - light.ailight3403ab
-  - light.ailight2b9ee6
+#  - light.clear_white_spectrum_bulb
+#  - light.ailight3403ab
+#  - light.ailight2b9ee6
+  - light.bedroom
   - light.panel_light_1

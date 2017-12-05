@@ -8,6 +8,8 @@
         entity_id: binary_sensor.switch_158d000186eafb
         click_type: long_click_press
         
-  action: 
-    - service: light.toggle
-      entity_id: group.printerlight
+  action:
+    - service: python_script.light
+      data_template:
+        entity_id: group.printerlight
+        action: toggle

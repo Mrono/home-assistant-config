@@ -1,5 +1,6 @@
 name: Kitchen Lights
 entities:
-  - light.tradfri_bulb_e26_opal_1000lm_4
-  - light.tradfri_bulb_e26_opal_1000lm_5
-  - light.tradfri_bulb_e26_opal_1000lm_6
+#  - light.tradfri_bulb_e26_opal_1000lm_4
+#  - light.tradfri_bulb_e26_opal_1000lm_5
+#  - light.tradfri_bulb_e26_opal_1000lm_6
+  - light.kitchen

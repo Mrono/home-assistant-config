@@ -6,5 +6,5 @@
     brightness: true
     rgb: true
     white_value: true
-    effect: true
+    effect: false
     optimistic: false

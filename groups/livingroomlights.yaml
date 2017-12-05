@@ -1,4 +1,4 @@
 name: Livingroom Lights
 entities:
-  - group.livingroomlamps
+  - light.livingroom_lamps
   - light.livingroom_rgb

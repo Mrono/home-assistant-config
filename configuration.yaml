@@ -18,28 +18,30 @@ homeassistant:
       hidden: false
     group.all_devices:
       hidden: false
-    group.livingroomlamps:
-      emulated_hue: true
-      emulated_hue_name: Livingroom Lamps
-    group.bedroomlights:
-      emulated_hue: true
+    light.livingroom_lamps:
+      google_assistant: true
+      google_assistant_name: Livingroom Lamps
+    light.bedroom:
+      emulated_hue_hidden: true
       emulated_hue_name: Bedroom Lights
-    group.bathroomlights:
-      emulated_hue: true
-      emulated_hue_name: Bathroom Lights
-    group.kitchenlights:
-      emulated_hue: true
-      emulated_hue_name: Kitchen Lights
-    group.hallwaylights:
-      emulated_hue: true
-      emulated_hue_name: Hallway Lights
-    group.officelights:
-      emulated_hue: true
-      emulated_hue_name: Office Lights
+      google_assistant: true
+      google_assistant_name: Bedroom Lights
+    light.bathroom:
+      google_assistant: true
+      google_assistant_name: Bathroom Lights
+    light.kitchen:
+      google_assistant: true
+      google_assistant_name: Kitchen Lights
+    light.hallway:
+      google_assistant: true
+      google_assistant_name: Hallway Lights
+    light.office:
+      google_assistant: true
+      google_assistant_name: Office Lights
 
 #    group.livingroomall:
-#      emulated_hue: true
-#      emulated_hue_name: Livingroom
+#      google_assistant: true
+#      google_assistant_name: Livingroom
     device_tracker.samsungsmg955u:
       friendly_name: Alexa
     device_tracker.android2b5b3318913096ed:
@@ -99,7 +101,6 @@ device_tracker:
 
 tradfri:
   host: !secret tradfri_gateway
-  api_key: !secret tradfri_api_key
   allow_tradfri_groups: false
 
 group: !include_dir_named groups/
@@ -187,9 +188,18 @@ notify:
     api_key: !secret pushover_api_key
     user_key: !secret pushover_user_key
 
-xiaomi:
+xiaomi_aqara:
   gateways:
    - mac:
      key: !secret xiaomi_gateway_key
 
 #recorder:
+
+google_assistant:
+  project_id: !secret ga_project_id
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
+  expose_by_default: false
+  exposed_domains:
+    - group
+    - sensor

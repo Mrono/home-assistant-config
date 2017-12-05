@@ -22,7 +22,7 @@ if trigger_event != None:
 
 #sunrise = hass.states.get('sun.sun').attributes.get('next_rising')
 
-maxBrightness = 254
+maxBrightness = 255
 dim = 50
 bright = maxBrightness
 lvl = None
@@ -41,7 +41,7 @@ for i in group.attributes.get('entity_id'):
     if brightness > 0: 
         break
 
-brightness = light.attributes.get('brightness') or 0
+#logger.info(light.attributes)
 
 if action == 'dim_toggle':
     if group.state == 'off':  lvl = dim
@@ -68,8 +68,8 @@ if action == 'off':
 
 # Call service
 if lvl == 0 :
-	data = { "entity_id" : entity_id, "transition" : 1 }
+	data = { "entity_id" : entity_id }
 	hass.services.call('light', 'turn_off', data)
 else :
-	data = { "entity_id" : entity_id, "brightness" : lvl, "transition" : 1 }
+	data = { "entity_id" : entity_id, "brightness" : lvl }
 	hass.services.call('light', 'turn_on', data)

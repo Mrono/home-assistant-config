@@ -14,11 +14,9 @@
       entity_id: group.livingroomlamps
       state: 'on'
         
-  action: 
-    - service: light.turn_on
-      entity_id: group.livingroomlamps
-      data:
-        brightness: 77
+  action:
+    service: scene.turn_on
+    entity_id: scene.livingroom_media_play
 
 - alias: Livingroom stop
 
@@ -32,9 +30,6 @@
       entity_id: group.livingroomlamps
       state: 'on'
 
-  action: 
-    - service: light.turn_on
-      entity_id: group.livingroomlamps
-      data:
-        brightness: 255
-
+  action:
+    service: scene.turn_on
+    entity_id: scene.livingroom_media_stop

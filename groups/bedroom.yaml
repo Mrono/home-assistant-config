@@ -7,7 +7,7 @@ entities:
   - sensor.humidity_158d00018734a1
   - sensor.illumination_158d0001a66203
 
-  - group.bedroomlights
+  - light.bedroom
 
   - binary_sensor.esp_4h7fo4u
   - binary_sensor.motion_sensor_158d0001a66203

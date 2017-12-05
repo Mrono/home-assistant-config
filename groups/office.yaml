@@ -9,6 +9,6 @@ entities:
 
   - binary_sensor.motion_sensor_158d0001a36727
 
-  - group.officelights
+  - light.office
 
-  - light.tradfri_bulb_e26_opal_1000lm_7
+  - light.printer

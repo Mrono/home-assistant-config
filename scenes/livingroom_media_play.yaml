@@ -1,5 +1,5 @@
-- name: Sunset
+- name: Livingroom Media Play
   entities:
     group.livingroomlamps:
       state: on
-      brightness: 255
+      brightness: 77
