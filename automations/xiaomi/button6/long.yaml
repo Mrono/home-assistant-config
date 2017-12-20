@@ -13,3 +13,8 @@
       entity_id: scene.turn_off_all_lights
     - service: scene.turn_on
       entity_id: scene.turn_off_all_devices
+    - service: switch.turn_off
+      entity_id: switch.sonoff1
+    - delay: 00:00:02
+    - service: switch.turn_on
+      entity_id: switch.sonoff1

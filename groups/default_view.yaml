@@ -28,6 +28,8 @@ entities:
   - binary_sensor.door_window_sensor_158d00018764b9
 
   - switch.nyan_lights
+  - switch.sonoff1
+  - switch.sonoff2
 
   - scene.presunset
   - scene.sunset
