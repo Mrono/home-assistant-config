@@ -5,6 +5,6 @@
     color_temp: true
     brightness: true
     rgb: true
-    white_value: true
+    white_value: false
     effect: false
     optimistic: false

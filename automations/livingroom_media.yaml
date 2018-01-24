@@ -3,10 +3,10 @@
 
   trigger: 
     - platform: state
-      entity_id: media_player.livingroom
+      entity_id: media_player.living_room_tv
       to: 'playing'
     - platform: state
-      entity_id: media_player.livingroom
+      entity_id: media_player.living_room_tv
       to: 'idle'
 
   condition:
@@ -22,7 +22,7 @@
 
   trigger: 
     - platform: state
-      entity_id: media_player.livingroom
+      entity_id: media_player.living_room_tv
       to: 'off'
        
   condition:

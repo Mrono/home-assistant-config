@@ -38,13 +38,13 @@ class GroupedLight(light.Light):
         self._name = name
         self._entity_ids = entity_ids
 
-    @property    
+    @property
     def name(self):
         return self._name
-        
+
     @property
     def brightness(self):
-        """Brightness of the light group"""   
+        """Brightness of the light group"""
         brightness = 0
         for state in self._light_states():
             if not 'brightness' in state.attributes:
@@ -114,4 +114,3 @@ class GroupedLight(light.Light):
         for entity_id in self._entity_ids:
             kwargs[ATTR_ENTITY_ID] = entity_id
             self.hass.services.call('light', SERVICE_TURN_OFF, kwargs, blocking=True)
-            

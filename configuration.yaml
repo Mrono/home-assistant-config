@@ -22,8 +22,6 @@ homeassistant:
       google_assistant: true
       google_assistant_name: Livingroom Lamps
     light.bedroom:
-      emulated_hue_hidden: true
-      emulated_hue_name: Bedroom Lights
       google_assistant: true
       google_assistant_name: Bedroom Lights
     light.bathroom:
@@ -46,6 +44,9 @@ homeassistant:
       friendly_name: Alexa
     device_tracker.android2b5b3318913096ed:
       friendly_name: Michael 
+    device_tracker.winc1745:
+      friendly_name: Finn
+
 
     sensor.temperature_158d0001825887:
       friendly_name: XLivingroom Temp
@@ -127,6 +128,9 @@ frontend:
 # Enables configuration UI
 config:
 
+media_player:
+  - platform: cast
+
 http:
   # Uncomment this to add a password (recommended!)
   api_password: !secret api_password
@@ -145,7 +149,8 @@ updater:
 
 # Discover some devices automatically
 discovery:
-
+  ignore:
+    - mqtt
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
@@ -167,20 +172,13 @@ mqtt:
   broker: !secret mqtt_host
   discovery: true
 
-emulated_hue:
-  type: google_home
-  listen_port: 80
-  expose_by_default: false
-
-
-
-influxdbfix:
-  host: !secret influx_host
-  default_measurement: domain
-  override_measurement: domain
-  exclude:
-    domains:
-       - automation
+#influxdbfix:
+#  host: !secret influx_host
+#  default_measurement: domain
+#  override_measurement: domain
+#  exclude:
+#    domains:
+#       - automation
 
 notify:
   - name: pushover
