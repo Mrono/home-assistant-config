@@ -1,0 +1,20 @@
+- name: Turn off all lights
+  entities:
+    switch.nyan_lights:
+      state: off
+    switch.random_lights:
+      state: off
+    group.livingroomlamps:
+      state: off
+    group.bathroomlights:
+      state: off
+    group.kitchenlights:
+      state: off
+    group.officelights:
+      state: off
+    group.hallwaylights:
+      state: off
+    light.livingroom_rgb:
+      state: off
+    group.bedroomlights:
+      state: off

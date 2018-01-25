@@ -4,8 +4,7 @@ dim             = 50
 bright          = maxBrightness
 
 
-
-
+sun             = hass.states.get('sun.sun')
 now             = datetime.datetime.now()
 entity_id       = data.get('entity_id')
 action 	        = data.get('action')
@@ -13,14 +12,25 @@ max             = data.get('max')
 min             = data.get('min')
 trigger_event   = data.get('trigger_event')
 lvl             = None
+elevation       = sun.attributes.get('elevation')
 
 if min != None: dim = min
 if max != None: bright = max
 
+#get hour and minute from sun.next_midnight
+def getMidnight (sun):
+    time = sun.attributes.get('next_midnight')
+    s1 = time.split('T')
+    s2 = s1[1].split(':')
+    return [int(s2[0]), int(s2[1])]
+
 #Dim lights if between midnight and sunrise
+midnight = getMidnight(sun)
 shouldDim = 0
-elevation = hass.states.get('sun.sun').attributes.get('elevation')
-if now.hour < 9 and elevation < 0:
+isPastMidnight = 0
+if now.hour > midnight[0] or (now.hour == midnight[0] and now.minute >= midnight[1]):
+    isPastMidnight = 1
+if isPastMidnight == 1 and elevation < 5:
     shouldDim = 1
 
 # Get current brightness value
@@ -74,8 +84,11 @@ if action == 'on':
 if action == 'off':
     lvl = 0
 
+logger.info(['entity_id', 'lvl', 'now.hour', 'isPastMidnight', 'elevation', 'shouldDim'])
+logger.info([entity_id, lvl, now.hour, isPastMidnight, elevation, shouldDim])
+
 # Call service
-if lvl == 0:
+if int(lvl) <= 0:
     data = { "entity_id" : entity_id }
     hass.services.call('light', 'turn_off', data)
 else:

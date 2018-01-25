@@ -1,6 +1,0 @@
-- name: Turn off all lights
-  entities:
-    switch.nyan_lights:
-      state: off
-    group.all_lights:
-      state: off
