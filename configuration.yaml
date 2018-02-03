@@ -18,24 +18,24 @@ homeassistant:
       hidden: false
     group.all_devices:
       hidden: false
-    light.livingroom_lamps:
-      google_assistant: true
-      google_assistant_name: Livingroom Lamps
-    light.bedroom:
-      google_assistant: true
-      google_assistant_name: Bedroom Lights
-    light.bathroom:
-      google_assistant: true
-      google_assistant_name: Bathroom Lights
-    light.kitchen:
-      google_assistant: true
-      google_assistant_name: Kitchen Lights
-    light.hallway:
-      google_assistant: true
-      google_assistant_name: Hallway Lights
-    light.office:
-      google_assistant: true
-      google_assistant_name: Office Lights
+#    light.livingroom_lamps:
+#      google_assistant: true
+#      google_assistant_name: Livingroom Lamps
+#    light.bedroom:
+#      google_assistant: true
+#      google_assistant_name: Bedroom Lights
+#    light.bathroom:
+#      google_assistant: true
+#      google_assistant_name: Bathroom Lights
+#    light.kitchen:
+#      google_assistant: true
+#      google_assistant_name: Kitchen Lights
+#    light.hallway:
+#      google_assistant: true
+#      google_assistant_name: Hallway Lights
+#    light.office:
+#      google_assistant: true
+#      google_assistant_name: Office Lights
 
 #    group.livingroomall:
 #      google_assistant: true
@@ -148,9 +148,9 @@ updater:
   # include_used_components: true
 
 # Discover some devices automatically
-discovery:
-  ignore:
-    - mqtt
+#discovery:
+#  ignore:
+#    - mqtt
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
@@ -197,7 +197,41 @@ google_assistant:
   project_id: !secret ga_project_id
   client_id: !secret ga_client_id
   access_token: !secret ga_access_token
+  api_key: !secret ga_api_key
   expose_by_default: false
   exposed_domains:
     - group
-    - sensor
+    - switch
+    - light
+  entity_config:
+    switch.random_lights:
+      name: Random
+      expose: true
+    switch.nyan_lights:
+      name: Color
+      expose: true
+    group.hotgluegun:
+      name: Hot Glue Gun
+      expose: true
+    light.livingroom_lamps:
+      expose: true
+      name: Livingroom Lamps
+    light.bedroom:
+      expose: true
+      name: Bedroom Lights
+    light.bathroom:
+      expose: true
+      name: Bathroom Lights
+    light.kitchen:
+      expose: true
+      name: Kitchen Lights
+    light.hallway:
+      expose: true
+      name: Hallway Lights
+    light.office:
+      expose: true
+      name: Office
+    script.lock_front_door:
+      expose: true
+      type: switch
+      name: Lock Front Door

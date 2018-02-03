@@ -84,8 +84,8 @@ if action == 'on':
 if action == 'off':
     lvl = 0
 
-logger.info(['entity_id', 'lvl', 'now.hour', 'isPastMidnight', 'elevation', 'shouldDim'])
-logger.info([entity_id, lvl, now.hour, isPastMidnight, elevation, shouldDim])
+logger.info(['entity_id', 'lvl', 'now.hour', 'now.minute', 'isPastMidnight', 'elevation', 'shouldDim', 'midnight'])
+logger.info([entity_id, lvl, now.hour, now.minute, isPastMidnight, elevation, shouldDim, midnight])
 
 # Call service
 if int(lvl) <= 0:
