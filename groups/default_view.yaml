@@ -31,6 +31,7 @@ entities:
   - switch.random_lights
   - switch.sonoff1
   - switch.sonoff2
+  - switch.sonoff3
 
   - scene.presunset
   - scene.sunset

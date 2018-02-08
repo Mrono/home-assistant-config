@@ -1,0 +1,8 @@
+    platform: mqtt
+    name: "sonoff5"
+    state_topic: "ha/stat/sonoff5/POWER"
+    command_topic: "ha/cmnd/sonoff5/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
