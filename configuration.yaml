@@ -47,6 +47,8 @@ homeassistant:
     device_tracker.winc1745:
       friendly_name: Finn
 
+    switch.sonoff2:
+        friendly_name: Grow Light
 
     sensor.temperature_158d0001825887:
       friendly_name: XLivingroom Temp
@@ -59,9 +61,14 @@ homeassistant:
       friendly_name: XBedroom Humidity
 
     sensor.temperature_158d00018734ca:
-      friendly_name: XOutside Temp
+      friendly_name: Lost Outside Temp
     sensor.humidity_158d00018734ca:
-      friendly_name: XOutside Humidity
+      friendly_name: Lost Outside Humidity
+
+    sensor.temperature_158d0001dcc6d7:
+        friendly_name: XOutside Temp
+    sensor.humidity_158d0001dcc6d7:
+        friendly_name: XOutside Humidity
 
     sensor.temperature_158d00018258e4:
       friendly_name: XOffice Temp

@@ -20,18 +20,23 @@ entities:
 #  - sensor.humidity_158d00018734a1
   - sensor.temperature_158d00018734ca
   - sensor.humidity_158d00018734ca
+  - sensor.temperature_158d0001dcc6d7
+  - sensor.humidity_158d0001dcc6d7
 #  - sensor.temperature_158d00018258e4
 #  - sensor.humidity_158d00018258e4
   - sensor.house_temp
   - sensor.house_humidity
+  - sensor.sonoff6_energy
+  - sensor.sonoff6_power
 
   - binary_sensor.door_window_sensor_158d00018764b9
 
   - switch.nyan_lights
   - switch.random_lights
-  - switch.sonoff1
-  - switch.sonoff2
   - switch.sonoff3
+  - switch.sonoff6
+
+  - script.lock_front_door
 
   - scene.presunset
   - scene.sunset

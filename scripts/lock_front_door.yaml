@@ -4,7 +4,7 @@
       data:
         entity_id: switch.sonoff1
     - delay:
-        seconds: 2
+        seconds: 1
     - service: switch.turn_on
       data:
         entity_id: switch.sonoff1

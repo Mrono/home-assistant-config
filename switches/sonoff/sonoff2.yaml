@@ -1,7 +1,7 @@
     platform: mqtt
     name: "sonoff2"
-    state_topic: "ha/stat/sonoff2/POWER"
-    command_topic: "ha/cmnd/sonoff2/POWER"
+    state_topic: "sonoff/sonoff2/stat/POWER"
+    command_topic: "sonoff/sonoff2/cmnd/POWER"
     qos: 1
     payload_on: "ON"
     payload_off: "OFF"
