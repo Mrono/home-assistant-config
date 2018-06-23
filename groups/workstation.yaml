@@ -1,4 +1,5 @@
-name: Hot Glue Gun
+name: Workstation
 view: no
 entities:
+  - switch.sonoff6
   - switch.switch1

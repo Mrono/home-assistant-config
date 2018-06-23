@@ -56,7 +56,7 @@ if action == 'dim_toggle':
     elif brightness < 110: lvl = bright
 
 if action == 'toggle':
-    if group.state == 'off': 
+    if group.state == 'off' or brightness == 0: 
         lvl = bright
         if shouldDim == 1:
             lvl = nightBrightness
@@ -84,8 +84,8 @@ if action == 'on':
 if action == 'off':
     lvl = 0
 
-logger.info(['entity_id', 'lvl', 'now.hour', 'now.minute', 'isPastMidnight', 'elevation', 'shouldDim', 'midnight'])
-logger.info([entity_id, lvl, now.hour, now.minute, isPastMidnight, elevation, shouldDim, midnight])
+logger.info(['entity_id', 'action', 'brightness', 'lvl', 'now.hour', 'now.minute', 'isPastMidnight', 'elevation', 'shouldDim', 'midnight'])
+logger.info([entity_id, action, brightness, lvl, now.hour, now.minute, isPastMidnight, elevation, shouldDim, midnight])
 
 # Call service
 if int(lvl) <= 0:

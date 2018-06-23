@@ -1,4 +1,0 @@
-platform: grouped_light
-name: Grow Light
-entities:
-  - switch.sonoff_A77FEA

@@ -1,5 +1,5 @@
 
-- alias: Xiaomi_button1_double
+- alias: Xiaomi_button1_double_off
 
   trigger: 
     - platform: event
@@ -20,7 +20,7 @@
       entity_id: light.livingroom_rgb
 
 
-- alias: Xiaomi_button1_double
+- alias: Xiaomi_button1_double_on
 
   trigger: 
     - platform: event

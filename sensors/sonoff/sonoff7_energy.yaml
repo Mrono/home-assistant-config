@@ -1,15 +1,15 @@
   - platform: mqtt
-    name: "Sonoff6 Energy Today"
-    state_topic: "sonoff/sonoff6/tele/SENSOR"
+    name: "Sonoff7 Energy Today"
+    state_topic: "sonoff/sonoff7/tele/SENSOR"
     value_template: "{{ value_json.ENERGY.Today }}"
     unit_of_measurement: "kWh"
   - platform: mqtt
-    name: "Sonoff6 Energy Yesterday"
-    state_topic: "sonoff/sonoff6/tele/SENSOR"
+    name: "Sonoff7 Energy Yesterday"
+    state_topic: "sonoff/sonoff7/tele/SENSOR"
     value_template: "{{ value_json.ENERGY.Yesterday }}"
     unit_of_measurement: "kWh"
   - platform: mqtt
-    name: "Sonoff6 Power"
-    state_topic: "sonoff/sonoff6/tele/SENSOR"
+    name: "Sonoff7 Power"
+    state_topic: "sonoff/sonoff7/tele/SENSOR"
     value_template: "{{ value_json.ENERGY.Power }}"
     unit_of_measurement: "W"

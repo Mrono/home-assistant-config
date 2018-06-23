@@ -18,6 +18,8 @@ homeassistant:
       hidden: false
     group.all_devices:
       hidden: false
+#    group.all_scenes:
+#      hidden: false
 #    light.livingroom_lamps:
 #      google_assistant: true
 #      google_assistant_name: Livingroom Lamps
@@ -49,6 +51,10 @@ homeassistant:
 
     switch.sonoff2:
         friendly_name: Grow Light
+    switch.sonoff6:
+        friendly_name: Soldering Iron
+    switch.switch1:
+        friendly_name: Hot Glue Gun
 
     sensor.temperature_158d0001825887:
       friendly_name: XLivingroom Temp
@@ -177,15 +183,15 @@ tts:
 
 mqtt:
   broker: !secret mqtt_host
-  discovery: true
+#  discovery: true
 
-#influxdbfix:
-#  host: !secret influx_host
-#  default_measurement: domain
-#  override_measurement: domain
-#  exclude:
-#    domains:
-#       - automation
+influxdbfix:
+  host: !secret influx_host
+  default_measurement: domain
+  override_measurement: domain
+  exclude:
+    domains:
+       - automation
 
 notify:
   - name: pushover
@@ -217,8 +223,11 @@ google_assistant:
     switch.nyan_lights:
       name: Color
       expose: true
-    group.hotgluegun:
+    switch.switch1:
       name: Hot Glue Gun
+      expose: true
+    switch.sonoff6:
+      name: Soldering Iron
       expose: true
     light.livingroom_lamps:
       expose: true
@@ -240,5 +249,8 @@ google_assistant:
       name: Office
     script.lock_front_door:
       expose: true
-      type: switch
       name: Lock Front Door
+
+apcupsd:
+  host: !secret apc_host
+  port: 3551

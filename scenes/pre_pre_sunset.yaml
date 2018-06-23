@@ -1,5 +1,0 @@
-- name: Pre-Pre-Sunset
-  entities:
-    group.livingroomlamps:
-      state: on
-      brightness: 50

@@ -1,0 +1,18 @@
+
+- alias: Disable Soldering iron after 3 hours
+
+  trigger: 
+    - platform: state
+      entity_id: switch.sonoff6
+      to: 'on'
+      for:
+        minutes: 180
+
+  action: 
+    - service: switch.turn_off
+      entity_id: switch.sonoff6
+    - service: notify.pushover
+      data:
+        message: "Soldering Iron has been turned off automaticly"
+        title: "HomeAssistant"
+

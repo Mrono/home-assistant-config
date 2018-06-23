@@ -1,4 +1,4 @@
-platform: grouped_light
+platform: group
 name: Livingroom Lamps
 entities:
   - light.tradfri_bulb_e26_ws_opal_980lm

@@ -1,10 +1,6 @@
-platform: grouped_light
+platform: group
 name: Bedroom
 entities:
-#  - light.clear_white_spectrum_bulb
-#  - light.ailight3403ab
-#  - light.ailight2b9ee6
-#  - light.ailight2ef169
-#  - light.ailight2f0148
-#  - light.panel_light_1
-  - group.bedroomlights
+  - light.ailight3403ab
+  - light.ailight2ef169
+  - light.ailight2f0148

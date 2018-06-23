@@ -8,8 +8,8 @@ entities:
 
   - camera.foscam_camera
 
-  - sensor.livingroom_temp
-  - sensor.livingroom_voltage
+
+
   - sensor.temperature_158d0001825887 
   - sensor.humidity_158d0001825887 
   - sensor.illumination_158d0001a25018
@@ -20,3 +20,5 @@ entities:
 
   - media_player.livingroom
   - media_player.living_room_home
+
+  - switch.sonoff1

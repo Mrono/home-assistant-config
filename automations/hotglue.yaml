@@ -9,5 +9,10 @@
         minutes: 60
 
   action: 
-    service: switch.turn_off
-    entity_id: switch.switch1
+    - service: switch.turn_off
+      entity_id: switch.switch1
+    - service: notify.pushover
+      data:
+        message: "Hot glue gun has been turned off automaticly"
+        title: "HomeAssistant"
+

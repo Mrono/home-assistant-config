@@ -1,0 +1,21 @@
+- alias: Office fan on
+
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.temperature_158d00018258e4
+      above: 77
+
+  action:
+    - service: switch.turn_on
+      entity_id: switch.sonoff2
+
+- alias: Office fan off
+
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.temperature_158d00018258e4
+      below: 75
+
+  action:
+    - service: switch.turn_off
+      entity_id: switch.sonoff2

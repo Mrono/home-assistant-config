@@ -7,17 +7,37 @@
     below: 2.5
   action:
     service: scene.turn_on
-    entity_id: scene.prepresunset
+    entity_id: scene.presunset1
 
-- alias: 'Turn a few lights on when the sun gets dimmer'
+- alias: 'Turn a few lights on when the sun gets dim'
   trigger:
     platform: numeric_state
     entity_id: sun.sun
     value_template: '{{ state.attributes.elevation }}'
-    below: 1.75
+    below: 2.1
   action:
     service: scene.turn_on
-    entity_id: scene.presunset
+    entity_id: scene.presunset2
+
+- alias: 'Turn a few lights on when the sun gets dim'
+  trigger:
+    platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 1.8
+  action:
+    service: scene.turn_on
+    entity_id: scene.presunset3
+
+- alias: 'Turn a few lights on when the sun gets dim'
+  trigger:
+    platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 1.4
+  action:
+    service: scene.turn_on
+    entity_id: scene.presunset4
 
 - alias: 'Turn more lights on as the sun gets dark'
   trigger:

@@ -2,17 +2,17 @@ view: yes
 icon: mdi:home 
 entities:
   - group.livingroomlights
-  - group.hotgluegun
+  - group.workstation
   - group.bedroomlights
   - group.bathroomlights
   - group.kitchenlights
   - group.hallwaylights
   - group.officelights
 
-#  - sensor.livingroom_temp
-#  - sensor.office_temp
-#  - sensor.bedroom_temp
-  - sensor.outside_temp
+
+
+
+
   - sensor.dark_sky_summary
 #  - sensor.temperature_158d0001825887
 #  - sensor.humidity_158d0001825887
@@ -26,19 +26,27 @@ entities:
 #  - sensor.humidity_158d00018258e4
   - sensor.house_temp
   - sensor.house_humidity
-  - sensor.sonoff6_energy
+  - sensor.sonoff6_energy_today
+  - sensor.sonoff6_energy_yesterday
   - sensor.sonoff6_power
+  - sensor.sonoff7_energy_today
+  - sensor.sonoff7_energy_yesterday
+  - sensor.sonoff7_power
 
   - binary_sensor.door_window_sensor_158d00018764b9
+  - binary_sensor.house_fan
 
   - switch.nyan_lights
   - switch.random_lights
   - switch.sonoff3
-  - switch.sonoff6
+  - switch.sonoff7
 
   - script.lock_front_door
 
-  - scene.presunset
+  - scene.presunset1
+  - scene.presunset2
+  - scene.presunset3
+  - scene.presunset4
   - scene.sunset
   - scene.sunrise
   - scene.turn_off_all_lights

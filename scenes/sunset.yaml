@@ -1,3 +1,27 @@
+- name: pre-sunset1
+  entities:
+    group.livingroomlamps:
+      state: on
+      brightness: 50
+
+- name: pre-sunset2
+  entities:
+    group.livingroomlamps:
+      state: on
+      brightness: 100
+
+- name: pre-sunset3
+  entities:
+    group.livingroomlamps:
+      state: on
+      brightness: 150
+
+- name: pre-sunset4
+  entities:
+    group.livingroomlamps:
+      state: on
+      brightness: 200
+
 - name: Sunset
   entities:
     group.livingroomlamps:

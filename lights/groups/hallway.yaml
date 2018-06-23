@@ -1,4 +1,4 @@
-platform: grouped_light
+platform: group
 name: Hallway
 entities:
   - light.tradfri_bulb_e26_opal_1000lm_3

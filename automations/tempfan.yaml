@@ -1,0 +1,21 @@
+- alias: Fans on
+
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.temperature_158d00018734a1
+      above: 76
+
+  action:
+    - service: switch.turn_on
+      entity_id: switch.sonoff7
+
+- alias: Fans off
+
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.temperature_158d00018734a1
+      below: 74
+
+  action:
+    - service: switch.turn_off
+      entity_id: switch.sonoff7

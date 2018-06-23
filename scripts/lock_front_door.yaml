@@ -8,3 +8,8 @@
     - service: switch.turn_on
       data:
         entity_id: switch.sonoff1
+    - service: notify.pushover
+      data:
+        message: "Door locked"
+        title: "HomeAssistant"
+

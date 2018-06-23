@@ -1,38 +1,38 @@
 
-- alias: Xiaomi_button5_single
+- alias: Xiaomi_button5_double
 
   trigger: 
     - platform: event
       event_type: click
       event_data:
         entity_id: binary_sensor.switch_158d00019df1ef
-        click_type: single
+        click_type: double
 
   condition:
     - condition: state
-      entity_id: switch.switch1
+      entity_id: switch.sonoff6
       state: 'on'
         
   action: 
     - service: switch.turn_off
-      entity_id: switch.switch1
+      entity_id: switch.sonoff6
 
 
-- alias: Xiaomi_button5_single
+- alias: Xiaomi_button5_double
 
   trigger: 
     - platform: event
       event_type: click
       event_data:
         entity_id: binary_sensor.switch_158d00019df1ef
-        click_type: single
+        click_type: double
        
   condition:
     - condition: state
-      entity_id: switch.switch1
+      entity_id: switch.sonoff6
       state: 'off'
 
   action: 
     - service: switch.turn_on
-      entity_id: switch.switch1
+      entity_id: switch.sonoff6
 
