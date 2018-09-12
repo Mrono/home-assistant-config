@@ -1,5 +1,5 @@
 
-- alias: Xiaomi_button5_single
+- alias: Xiaomi_button5_single_off
 
   trigger: 
     - platform: event
@@ -18,7 +18,7 @@
       entity_id: switch.switch1
 
 
-- alias: Xiaomi_button5_single
+- alias: Xiaomi_button5_single_on
 
   trigger: 
     - platform: event

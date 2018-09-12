@@ -7,6 +7,8 @@
         entity_id: binary_sensor.wall_switch_both_158d0001641685
         click_type: both
 
-  action: 
-    - service: light.toggle
-      entity_id: group.bathroomlights
+  action:
+    - service: python_script.light
+      data_template:
+        entity_id: group.hallwaylights
+        action: toggle

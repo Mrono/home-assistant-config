@@ -20,28 +20,7 @@ homeassistant:
       hidden: false
 #    group.all_scenes:
 #      hidden: false
-#    light.livingroom_lamps:
-#      google_assistant: true
-#      google_assistant_name: Livingroom Lamps
-#    light.bedroom:
-#      google_assistant: true
-#      google_assistant_name: Bedroom Lights
-#    light.bathroom:
-#      google_assistant: true
-#      google_assistant_name: Bathroom Lights
-#    light.kitchen:
-#      google_assistant: true
-#      google_assistant_name: Kitchen Lights
-#    light.hallway:
-#      google_assistant: true
-#      google_assistant_name: Hallway Lights
-#    light.office:
-#      google_assistant: true
-#      google_assistant_name: Office Lights
 
-#    group.livingroomall:
-#      google_assistant: true
-#      google_assistant_name: Livingroom
     device_tracker.samsungsmg955u:
       friendly_name: Alexa
     device_tracker.android2b5b3318913096ed:
@@ -56,30 +35,35 @@ homeassistant:
     switch.switch1:
         friendly_name: Hot Glue Gun
 
+    sensor.temperature_158d00012172f4:
+      friendly_name: Freezer Temp
+    sensor.humidity_158d00012172f4:
+      friendly_name: Freezer Humidity
+
+    sensor.temperature_158d0001a2b40f:
+      friendly_name: Fridge Temp
+    sensor.humidity_158d0001a2b40f:
+      friendly_name: Fridge Humidity
+
     sensor.temperature_158d0001825887:
-      friendly_name: XLivingroom Temp
+      friendly_name: Livingroom Temp
     sensor.humidity_158d0001825887:
-      friendly_name: XLivingroom Humidity
+      friendly_name: Livingroom Humidity
 
     sensor.temperature_158d00018734a1:
-      friendly_name: XBedroom Temp
+      friendly_name: Bedroom Temp
     sensor.humidity_158d00018734a1:
-      friendly_name: XBedroom Humidity
-
-    sensor.temperature_158d00018734ca:
-      friendly_name: Lost Outside Temp
-    sensor.humidity_158d00018734ca:
-      friendly_name: Lost Outside Humidity
+      friendly_name: Bedroom Humidity
 
     sensor.temperature_158d0001dcc6d7:
-        friendly_name: XOutside Temp
+        friendly_name: Outside Temp
     sensor.humidity_158d0001dcc6d7:
-        friendly_name: XOutside Humidity
+        friendly_name: Outside Humidity
 
     sensor.temperature_158d00018258e4:
-      friendly_name: XOffice Temp
+      friendly_name: Office Temp
     sensor.humidity_158d00018258e4:
-      friendly_name: XOffice Humidity
+      friendly_name: Office Humidity
 
     binary_sensor.motion_sensor_158d0001a36727:
       friendly_name: Office Movement
@@ -132,6 +116,7 @@ scene: !include_dir_list scenes/
 script: !include_dir_named scripts/
 binary_sensor: !include_dir_merge_list binary_sensors/
 sensor: !include_dir_merge_list sensors/
+input_boolean: !include_dir_named input_boolean/
 # Show links to resources in log and frontend
 #introduction:
 
@@ -169,13 +154,14 @@ conversation:
 
 # Enables support for tracking state changes over time.
 history:
-
+recorder:
+  purge_keep_days: 7
+  
 # View all events in a logbook
 logbook:
 
 # Track the sun
 sun:
-
 
 # Text to speech
 tts:
@@ -192,6 +178,9 @@ influxdbfix:
   exclude:
     domains:
        - automation
+       - device_tracker
+       - camera
+       - media_player
 
 notify:
   - name: pushover
@@ -203,8 +192,6 @@ xiaomi_aqara:
   gateways:
    - mac:
      key: !secret xiaomi_gateway_key
-
-#recorder:
 
 google_assistant:
   project_id: !secret ga_project_id
@@ -235,6 +222,9 @@ google_assistant:
     light.bedroom:
       expose: true
       name: Bedroom Lights
+    light.diningroom:
+      expose: true
+      name: Diningroom Lights
     light.bathroom:
       expose: true
       name: Bathroom Lights

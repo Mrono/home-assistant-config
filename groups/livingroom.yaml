@@ -3,6 +3,7 @@ view: yes
 entities:
   - light.livingroom_lamps
   - group.hotgluegun
+  - group.diningroomlights
 
   - light.livingroom_rgb
 

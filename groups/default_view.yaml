@@ -9,29 +9,23 @@ entities:
   - group.hallwaylights
   - group.officelights
 
+  - light.porch
 
-
-
+  - input_boolean.moving_lights
+  - input_boolean.guest_mode
 
   - sensor.dark_sky_summary
-#  - sensor.temperature_158d0001825887
-#  - sensor.humidity_158d0001825887
-#  - sensor.temperature_158d00018734a1
-#  - sensor.humidity_158d00018734a1
-  - sensor.temperature_158d00018734ca
-  - sensor.humidity_158d00018734ca
+  - sensor.dark_sky_nearest_storm_distance
   - sensor.temperature_158d0001dcc6d7
   - sensor.humidity_158d0001dcc6d7
-#  - sensor.temperature_158d00018258e4
-#  - sensor.humidity_158d00018258e4
   - sensor.house_temp
   - sensor.house_humidity
-  - sensor.sonoff6_energy_today
-  - sensor.sonoff6_energy_yesterday
-  - sensor.sonoff6_power
-  - sensor.sonoff7_energy_today
-  - sensor.sonoff7_energy_yesterday
-  - sensor.sonoff7_power
+#  - sensor.sonoff6_energy_today
+#  - sensor.sonoff6_energy_yesterday
+#  - sensor.sonoff6_power
+#  - sensor.sonoff7_energy_today
+#  - sensor.sonoff7_energy_yesterday
+#  - sensor.sonoff7_power
 
   - binary_sensor.door_window_sensor_158d00018764b9
   - binary_sensor.house_fan
@@ -55,13 +49,6 @@ entities:
   - scene.livingroom_media_stop
 
   - camera.foscam_camera
-
-#  - light.ailight3403ab
-#  - light.ailight2b9ee6
-  - light.ailight2ef169
-  - light.ailight2f0148
-#  - light.panel_light_1
-  - light.printer
 
   - media_player.living_room_tv
   - media_player.living_room_speaker

@@ -1,0 +1,4 @@
+platform: group
+name: Porch
+entities:
+  - light.ailight2b9ee6

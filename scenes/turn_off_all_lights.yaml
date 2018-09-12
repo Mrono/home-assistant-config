@@ -18,3 +18,5 @@
       state: off
     group.bedroomlights:
       state: off
+    group.diningroomlights:
+      state: off

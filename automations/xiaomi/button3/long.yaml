@@ -13,3 +13,6 @@
       entity_id: scene.turn_off_all_lights
     - service: scene.turn_on
       entity_id: scene.turn_off_all_devices
+    - delay: 00:00:06
+    - service: script.turn_on
+      entity_id: script.lock_front_door

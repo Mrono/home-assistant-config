@@ -1,6 +1,6 @@
   - platform: mqtt
-    state_topic: "/ha/esp_4h7fo4u/Input/Button"
+    state_topic: "hayaml/ac/binary_sensor/ac_fan/state"
     name: "House Fan"
     qos: 0
-    payload_on: "1"
-    payload_off: "0"
+    payload_on: "ON"
+    payload_off: "OFF"

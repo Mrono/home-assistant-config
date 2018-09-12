@@ -1,15 +1,15 @@
-
-- alias: Xiaomi_button4_single
+- alias: Xiaomi_button7_single
 
   trigger: 
     - platform: event
       event_type: click
       event_data:
-        entity_id: binary_sensor.switch_158d000186eafb
+        entity_id: binary_sensor.switch_158d00019dbca6
         click_type: single
 
   action:
     - service: python_script.light     
       data_template:
-        entity_id: light.office
+        entity_id: group.diningroomlights
         action: toggle
+        max: 200

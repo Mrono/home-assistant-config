@@ -1,0 +1,22 @@
+
+- alias: Bedroom motion
+
+  trigger: 
+    - platform: event
+      event_type: motion
+      event_data:
+        entity_id: binary_sensor.motion_sensor_158d0001a66203
+
+  condition:
+    - condition: state
+      entity_id: input_boolean.moving_lights
+      state: 'on'
+
+  action:
+    - service: python_script.light     
+      data_template:
+        entity_id: group.bedroomlights
+        action: 'on'
+
+
+

@@ -10,9 +10,14 @@
       to: 'idle'
 
   condition:
-    - condition: state
-      entity_id: group.livingroomlamps
-      state: 'on'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.livingroomlamps
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.moving_lights
+        state: 'off'
         
   action:
     service: scene.turn_on
@@ -26,9 +31,14 @@
       to: 'off'
        
   condition:
-    - condition: state
-      entity_id: group.livingroomlamps
-      state: 'on'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.livingroomlamps
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.moving_lights
+        state: 'off'
 
   action:
     service: scene.turn_on

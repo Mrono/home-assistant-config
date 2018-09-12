@@ -3,3 +3,4 @@ entities:
 #  - light.tradfri_bulb_e26_ws_opal_980lm_4
   - light.office
   - switch.sonoff2
+  - light.printer

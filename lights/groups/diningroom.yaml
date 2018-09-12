@@ -1,0 +1,8 @@
+platform: group
+name: Diningroom
+entities:
+  - light.tradfri_bulb_e26_opal_1000lm_8
+  - light.tradfri_bulb_e26_opal_1000lm_9
+  - light.tradfri_bulb_e26_opal_1000lm_10
+  - light.tradfri_bulb_e26_opal_1000lm_11
+  - light.tradfri_bulb_e26_opal_1000lm_12

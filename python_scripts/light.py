@@ -51,16 +51,21 @@ elif type == 'group':
 
 # Parse actions for what to do
 if action == 'dim_toggle':
-    if group.state == 'off':  lvl = dim
+    if light.state == 'off':  lvl = dim
     elif brightness >= 110: lvl = dim
     elif brightness < 110: lvl = bright
 
+if action == 'dim':
+    lvl = brightness/3
+    if lvl < 30:
+        lvl = 0
+
 if action == 'toggle':
-    if group.state == 'off' or brightness == 0: 
+    if light.state == 'off' or brightness == 0: 
         lvl = bright
         if shouldDim == 1:
             lvl = nightBrightness
-    elif group.state == 'on':
+    elif light.state == 'on':
         lvl = 0
 
 if action == 'dimmer':

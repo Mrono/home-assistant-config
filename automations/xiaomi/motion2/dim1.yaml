@@ -1,0 +1,22 @@
+
+- alias: Livingroom no motion
+
+  trigger: 
+    - platform: template
+      value_template: '{{ states.binary_sensor.motion_sensor_158d0001a25018.attributes["No motion since"] | int >= 180 }}'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.moving_lights
+        state: 'on'
+      - condition: state
+        entity_id: group.livingroomlamps
+        state: 'on'
+
+  action:
+    - service: python_script.light     
+      data_template:
+        entity_id: group.livingroomlamps
+        action: dim
