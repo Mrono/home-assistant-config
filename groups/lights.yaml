@@ -1,0 +1,12 @@
+name: Lights
+entities:
+  - light.bedroom
+  - light.bathroom
+  - light.office
+  - light.livingroom_lamps
+  - light.livingroom_rgb
+  - light.kitchen
+  - light.hallway
+  - light.porch
+  - light.diningroom
+

@@ -4,7 +4,7 @@
     - platform: event
       event_type: cube_action
       event_data:
-        entity_id: binary_sensor.cube_158d000101bc14
+        entity_id: binary_sensor.cube_158d000101bc14_2
         action_type: rotate
 
   action:

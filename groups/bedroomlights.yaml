@@ -3,6 +3,7 @@ entities:
 #  - light.clear_white_spectrum_bulb
 #  - light.panel_light_1
 
-  - light.ailight3403ab
-  - light.ailight2ef169
-  - light.ailight2f0148
+#  - light.ailight3403ab
+#  - light.ailight2ef169
+#  - light.ailight2f0148
+- light.bedroom

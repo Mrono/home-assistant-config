@@ -1,15 +1,16 @@
 view: yes
 icon: mdi:home 
 entities:
-  - group.livingroomlights
+#  - group.livingroomlights
   - group.workstation
-  - group.bedroomlights
-  - group.bathroomlights
-  - group.kitchenlights
-  - group.hallwaylights
-  - group.officelights
+#  - group.bedroomlights
+#  - group.bathroomlights
+#  - group.kitchenlights
+#  - group.hallwaylights
+#  - group.officelights
+  - group.lights
 
-  - light.porch
+#  - light.porch
 
   - input_boolean.moving_lights
   - input_boolean.guest_mode
@@ -37,22 +38,22 @@ entities:
 
   - script.lock_front_door
 
-  - scene.presunset1
-  - scene.presunset2
-  - scene.presunset3
-  - scene.presunset4
+#  - scene.presunset1
+#  - scene.presunset2
+#  - scene.presunset3
+#  - scene.presunset4
   - scene.sunset
   - scene.sunrise
   - scene.turn_off_all_lights
   - scene.turn_off_all_devices
-  - scene.livingroom_media_play
-  - scene.livingroom_media_stop
+#  - scene.livingroom_media_play
+#  - scene.livingroom_media_stop
 
   - camera.foscam_camera
 
   - media_player.living_room_tv
   - media_player.living_room_speaker
 
-  - device_tracker.samsungsmg955u
-  - device_tracker.android2b5b3318913096ed
-  - device_tracker.winc1745
+#  - device_tracker.samsungsmg955u
+#  - device_tracker.android2b5b3318913096ed
+#  - device_tracker.winc1745
