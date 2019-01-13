@@ -1,4 +1,5 @@
-    platform: mqtt_json
+    platform: mqtt
+    schema: json
     name: 'Livingroom RGB'
     state_topic: 'ha/RGB/000CEC36/json/state'
     command_topic: 'ha/RGB/000CEC36/json/set'

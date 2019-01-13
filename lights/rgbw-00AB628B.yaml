@@ -1,4 +1,5 @@
-    platform: mqtt_json
+    platform: mqtt
+    schema: json
     name: 'Panel Light 1'
     state_topic: 'ha/RGBW/00AB628B/json/state'
     command_topic: 'ha/RGBW/00AB628B/json/set'

@@ -4,3 +4,5 @@
     group.livingroomlights: off
     group.bedroomlights: off
     group.hallwaylights: off
+    cover.curtain_158d000288203a:
+      position: 100

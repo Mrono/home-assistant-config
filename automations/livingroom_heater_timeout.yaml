@@ -1,18 +1,18 @@
 
-- alias: Disable Soldering iron after 3 hours
+- alias: Disable Livingroom Heater after 3 hours
 
   trigger: 
     - platform: state
-      entity_id: switch.sonoff3
+      entity_id: switch.sonoff7
       to: 'on'
       for:
         minutes: 180
 
   action: 
     - service: switch.turn_off
-      entity_id: switch.sonoff3
+      entity_id: switch.sonoff7
     - service: notify.pushover
       data:
-        message: "Soldering Iron has been turned off automaticly"
+        message: "Livingroom Heater has been turned off automaticly"
         title: "HomeAssistant"
 

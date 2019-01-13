@@ -1,0 +1,23 @@
+- alias: Smoke alarm
+
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.smoke_sensor_158d0001580ab7
+      to: 'on'
+
+  action:
+    - service: camera.snapshot
+      data:
+        entity_id: camera.livingroom
+        filename: /tmp/ha/camera.snapshot.jpg
+    - service: notify.pushover
+      data:
+        message: "Smoke alarm has triggered."
+        title: "SMOKE ALARM TRIGGERED"
+        data:
+          priority: 2
+          expire: 300
+          retry: 30
+          sound: "persistent"
+          file:
+            path: "/tmp/ha/camera.snapshot.jpg"

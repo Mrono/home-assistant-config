@@ -3,7 +3,7 @@
 
   trigger: 
     - platform: event
-      event_type: click
+      event_type: xiaomi_aqara.click
       event_data:
         entity_id: binary_sensor.switch_158d00019df118
         click_type: long_click_press
@@ -21,3 +21,5 @@
       entity_id: switch.sonoff1
     - service: scene.turn_on
       entity_id: scene.turn_off_all_lights
+    - service: cover.close_cover
+      entity_id: cover.curtain_158d000288203a

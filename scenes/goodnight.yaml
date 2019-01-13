@@ -1,0 +1,6 @@
+- name: goodnight
+  entities:
+    group.livingroomlamps:
+      state: on
+      brightness: 50
+

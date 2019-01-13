@@ -1,8 +1,6 @@
 name: Kitchen
 view: yes
 entities:
-  - sensor.temperature_158d00012172f4
-  - sensor.humidity_158d00012172f4
   - sensor.temperature_158d0001a2b40f
   - sensor.humidity_158d0001a2b40f
   - group.kitchenlights

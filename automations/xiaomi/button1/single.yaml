@@ -3,13 +3,15 @@
 
   trigger: 
     - platform: event
-      event_type: click
+      event_type: xiaomi_aqara.click
       event_data:
         entity_id: binary_sensor.switch_158d0001101bc1
         click_type: single
 
   action:
-    - service: python_script.light     
-      data_template:
-        entity_id: group.livingroomlamps
-        action: toggle
+#    - service: python_script.light     
+#      data_template:
+#        entity_id: group.livingroomlamps
+#        action: toggle
+    - service: switch.toggle
+      entity_id: switch.sonoff7

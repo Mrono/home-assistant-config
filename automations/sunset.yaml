@@ -1,5 +1,5 @@
 
-- alias: 'Turn a few lights on when the sun gets dim'
+- alias: 'Turn a few lights on when the sun gets dim1'
   trigger:
     platform: numeric_state
     entity_id: sun.sun
@@ -9,7 +9,7 @@
     service: scene.turn_on
     entity_id: scene.presunset1
 
-- alias: 'Turn a few lights on when the sun gets dim'
+- alias: 'Turn a few lights on when the sun gets dim2'
   trigger:
     platform: numeric_state
     entity_id: sun.sun
@@ -19,7 +19,7 @@
     service: scene.turn_on
     entity_id: scene.presunset2
 
-- alias: 'Turn a few lights on when the sun gets dim'
+- alias: 'Turn a few lights and close the curtains on when the sun gets dim3'
   trigger:
     platform: numeric_state
     entity_id: sun.sun
@@ -29,7 +29,7 @@
     service: scene.turn_on
     entity_id: scene.presunset3
 
-- alias: 'Turn a few lights on when the sun gets dim'
+- alias: 'Turn a few lights on when the sun gets dim4'
   trigger:
     platform: numeric_state
     entity_id: sun.sun

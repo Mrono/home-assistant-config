@@ -1,0 +1,24 @@
+title: My Awesome Home
+views:
+    # View tab title.
+  - id: 0  # Automatically created id
+    title: Example
+    panel: true
+    # Makes the first card fill the view
+    cards:
+      - id: b904aacdeff44907828156b2967f3239  # Automatically created id
+        type: entities
+        # Title of the entities card
+        title: Sonoff
+        # The entities here will be shown in the same order as specified.
+        # Each entry is an entity ID or a map with extra options.
+        entities:
+          - switch.sonoff6
+          - sensor.sonoff6_energy_today
+          - sensor.sonoff6_energy_yesterday
+          - sensor.sonoff6_power
+          - switch.sonoff7
+          - sensor.sonoff7_energy_today
+          - sensor.sonoff7_energy_yesterday
+          - sensor.sonoff7_power
+

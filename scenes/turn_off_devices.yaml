@@ -2,6 +2,8 @@
   entities:
     switch.switch1:
       state: off
+    switch.sonoff7:
+      state: off
     media_player.livingroom:
       state: off
     media_player.living_room_home:

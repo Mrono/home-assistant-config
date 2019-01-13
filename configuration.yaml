@@ -1,4 +1,7 @@
 homeassistant:
+  whitelist_external_dirs:
+    - '/tmp/ha'
+
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
@@ -28,23 +31,32 @@ homeassistant:
     device_tracker.winc1745:
       friendly_name: Finn
 
+    binary_sensor.smoke_sensor_158d0001580ab7:
+        friendly_name: Smoke Alarm
     switch.sonoff2:
         friendly_name: Grow Light
     switch.sonoff6:
+        friendly_name: Bedroom Heater
+    switch.sonoff7:
+        friendly_name: Livingroom Heater
+    switch.sonoff3:
         friendly_name: Soldering Iron
     switch.switch1:
         friendly_name: Hot Glue Gun
 
+    cover.curtain_158d000288203a:
+      friendly_name: Livingroom Curtains
+      device_class: window
+
     sensor.temperature_158d00012172f4:
-      friendly_name: Freezer Temp
+      friendly_name: Jeep Temp
     sensor.humidity_158d00012172f4:
-      friendly_name: Freezer Humidity
+      friendly_name: Jeep Humidity
 
     sensor.temperature_158d0001a2b40f:
       friendly_name: Fridge Temp
     sensor.humidity_158d0001a2b40f:
       friendly_name: Fridge Humidity
-
     sensor.temperature_158d0001825887:
       friendly_name: Livingroom Temp
     sensor.humidity_158d0001825887:
@@ -135,6 +147,11 @@ http:
   server_port: 8123
   # Uncomment this if you are using SSL or running in Docker etc
   # base_url: example.duckdns.org:8123
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - !secret http_proxy
+  ip_ban_enabled: true
+  login_attempts_threshold: 7
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -184,7 +201,7 @@ influxdbfix:
 
 notify:
   - name: pushover
-    platform: pushover
+    platform: pushover4
     api_key: !secret pushover_api_key
     user_key: !secret pushover_user_key
 
@@ -195,8 +212,8 @@ xiaomi_aqara:
 
 google_assistant:
   project_id: !secret ga_project_id
-  client_id: !secret ga_client_id
-  access_token: !secret ga_access_token
+#  client_id: !secret ga_client_id
+#  access_token: !secret ga_access_token
   api_key: !secret ga_api_key
   expose_by_default: false
   exposed_domains:
@@ -240,6 +257,9 @@ google_assistant:
     script.lock_front_door:
       expose: true
       name: Lock Front Door
+    cover.curtain_158d000288203a:
+      expose: true
+      name: Livingroom Curtains
 
 apcupsd:
   host: !secret apc_host

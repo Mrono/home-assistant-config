@@ -1,5 +1,5 @@
 name: Workstation
 view: no
 entities:
-  - switch.sonoff6
+  - switch.sonoff3
   - switch.switch1

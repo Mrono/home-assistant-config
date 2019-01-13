@@ -1,4 +1,5 @@
-    platform: mqtt_json
+    platform: mqtt
+    schema: json
     name: 'AiLight-3403AB'
     state_topic: 'ha/AiLight-3403AB'
     command_topic: 'ha/AiLight-3403AB/set'

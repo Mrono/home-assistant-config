@@ -27,3 +27,5 @@
     group.livingroomlamps:
       state: on
       brightness: 255
+    cover.curtain_158d000288203a:
+      position: 0

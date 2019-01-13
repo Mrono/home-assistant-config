@@ -22,3 +22,5 @@ entities:
   - light.office
 
   - light.printer
+
+  - camera.printer
